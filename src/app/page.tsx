@@ -1,6 +1,13 @@
-import { redirect } from "next/navigation";
+import { HeroSection } from "@/components/landing/hero-section";
+import { ContentSection } from "@/components/landing/content-section";
+import { CtaSection } from "@/components/landing/cta-section";
 
 export default function Home() {
-  // Redirect to login page
-  redirect("/login");
+  return (
+    <main className="min-h-screen">
+      <HeroSection />
+      <ContentSection />
+      <CtaSection />
+    </main>
+  );
 }

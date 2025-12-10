@@ -17,7 +17,7 @@ export function DocumentLayout({ children, documentTitle, onBack }: DocumentLayo
   return (
     <div className="min-h-screen bg-background relative">
       {/* Texture overlay */}
-      <TextureOverlay />
+      <TextureOverlay texture="dots" opacity={0.1} />
       
       {/* Header with toolbar */}
       <div className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b px-6 py-4 flex items-center justify-between">

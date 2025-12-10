@@ -62,8 +62,9 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               {children}
             </main>
 
-            {/* Dock */}
-            <Dock className="fixed bottom-4 left-1/2 transform -translate-x-1/2" />
+            {/* Dock - commented out as it requires children */}
+            {/* <Dock className="fixed bottom-4 left-1/2 transform -translate-x-1/2">
+            </Dock> */}
           </div>
         </div>
       </div>

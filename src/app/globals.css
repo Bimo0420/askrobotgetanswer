@@ -162,6 +162,24 @@
   --shadow-lg: var(--shadow-lg);
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  @keyframes accordion-down {
+  from {
+    height: 0;
+    }
+  to {
+    height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+    }
+  to {
+    height: 0;
+    }
+  }
 }
 
 @layer base {
@@ -189,7 +207,6 @@
   }
 }
 
-
 /* Ensure cards have consistent height and better spacing */
 .document-card {
   @apply flex flex-col h-full;
@@ -204,12 +221,12 @@
   .document-card .flex.gap-1 {
     gap: 0.25rem;
   }
-  
+
   .document-card button {
     min-width: 0;
     flex-shrink: 1;
   }
-  
+
   /* Hide text in buttons when they don't fit */
   .document-card button span {
     display: none;
